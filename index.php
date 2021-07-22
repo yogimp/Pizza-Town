@@ -1,12 +1,7 @@
 <?php 
-    // connect to database
-    $conn =  mysqli_connect('localhost', 'root', '', 'pizza_town');
 
-    // check connection
-    if( !$conn ) {
-        echo 'Connection  error : ' . mysqli_connect_error();
-    }
-
+    include('config/db_connect.php');
+    
     // write query for all pizzas
     $sql = 'SELECT title, ingredients, id FROM pizzas ORDER BY create_at';
 
