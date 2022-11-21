@@ -1,19 +1,17 @@
 <?php 
 
-  session_start();
+    session_start();
 
-  //$_SESSION['name'] = 'mario';
+    //$_SESSION['name'] = 'mario';
 
-  if($_SERVER['QUERY_STRING'] == 'noname'){
-    //unset($_SESSION['name']);
-    session_unset();
-  }
-
-  // null coalesce
-  $name = $_SESSION['name'] ?? 'Guest';
-
-  // get cookie
-  $gender = $_COOKIE['gender'] ?? 'Unknown';
+    if($_SERVER['QUERY_STRING'] == 'noname'){
+        //unset($_SESSION['name']);
+        session_unset();
+    }
+    // null coalesce
+    $name = $_SESSION['name'] ?? 'Guest';
+    // get cookie
+    $gender = $_COOKIE['gender'] ?? 'Unknown';
 
 ?>
 
@@ -25,9 +23,7 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <title>Pizza Town</title>
-
     <style>
         .brand {
             background: #cbb09c !important;

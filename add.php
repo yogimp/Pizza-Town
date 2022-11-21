@@ -18,8 +18,8 @@
             }
         }
 
-         // check title
-         if( empty($_POST['title']) ) {
+        // check title
+        if( empty($_POST['title']) ) {
             $errors['title'] = 'A title is required <br />';
         } else {
             $title = $_POST['title'];
@@ -28,8 +28,8 @@
             }
         }
 
-         // check email
-         if( empty($_POST['ingredients']) ) {
+        // check ingredients
+        if( empty($_POST['ingredients']) ) {
             $errors['ingredients'] = 'At least one ingredients is required <br />';
         } else {
             $ingredients = $_POST['ingredients'];
@@ -41,7 +41,6 @@
         if( array_filter($errors) ) {
 
         } else {
-
             $email = mysqli_real_escape_string($conn, $_POST['email']);
             $title = mysqli_real_escape_string($conn, $_POST['title']);
             $ingredients = mysqli_real_escape_string($conn, $_POST['ingredients']);
@@ -57,8 +56,6 @@
                 // error
                 echo 'query error : ' . mysqli_error($conn);
             }
-
-            
         }
     }
 
